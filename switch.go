@@ -18,7 +18,7 @@ func main() {
 	}
 
 	switch time.Now().Weekday() {
-	case time.Saturday, time.Sunday:
+	case time.Saturday, time.Sunday: // 可以多个条件
 		fmt.Println("It`s the weekday")
 	default:
 		fmt.Println("It`s the workday")
