@@ -23,4 +23,12 @@ func main() {
 		}
 	}
 	fmt.Println("2d:", twoD)
+
+	arr := [2]int{1, 3}
+	fmt.Println(arr)
+
+	var arr2 [3]int
+
+	arr2[1] = 3
+	fmt.Println(arr2[1])
 }
