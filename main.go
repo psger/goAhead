@@ -1,12 +1,11 @@
 package main
 
-import (
+import(
 	"fmt"
 	"pack1"
 )
 
-func main() {
-	fmt.Println("hello world")
+func main()  {
 	var test1 string
 	test1 = pack1.ReturnStr()
 	fmt.Println(test1)
