@@ -14,9 +14,11 @@ func main() {
 	a := []int{7, 2, 8, -9, 4, 0}
 
 	c := make(chan int)
-	go sumc(a[:len(a)/2], c)
-	go sumc(a[len(a)/2:], c)
-	x, y := <-c, <-c
+
+	// 协程之间共享数据c
+	go sumc(a[:len(a)/2], c) // c:17
+	go sumc(a[len(a)/2:], c)  // c:-5
+	x, y := <-c, <-c // 为什么结果是 -5 17
 
 	fmt.Println(x, y, x+y)
 }
